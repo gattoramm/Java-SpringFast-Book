@@ -1,10 +1,10 @@
-package part1.ch3.ex4.beans;
+package part1.ch3.ex5.beans;
 
 import org.springframework.stereotype.Component;
 
 @Component
 public class Parrot {
-    private String name;
+    private String name = "Koko";
 
     public String getName() {
         return name;
