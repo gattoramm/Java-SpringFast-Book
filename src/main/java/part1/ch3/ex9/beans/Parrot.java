@@ -1,4 +1,4 @@
-package part1.ch3.ex4.beans;
+package part1.ch3.ex9.beans;
 
 public class Parrot {
     private String name;

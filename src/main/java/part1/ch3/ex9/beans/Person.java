@@ -1,11 +1,7 @@
-package part1.ch3.ex4.beans;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package part1.ch3.ex9.beans;
 
 public class Person {
     private String name;
-
-    @Autowired
     private Parrot parrot;
 
     public String getName() {
