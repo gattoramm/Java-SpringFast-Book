@@ -10,7 +10,7 @@ public class ProjectConfig {
     @Bean
     Parrot parrot() {
         var p = new Parrot();
-        p.setName("koko");
+        p.setName("Koko");
         // Spring добавляет в контекст экземпляр класса Parrot, возвращаемый методом
         return p;
     }
