@@ -2,7 +2,6 @@ package part1.ch2.ex8.main;
 
 import part1.ch2.ex8.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import java.util.function.Supplier;
 
 public class Main {
@@ -14,7 +13,7 @@ public class Main {
         x.setName("Koko");
 
         var y = new Parrot();
-        x.setName("Kuku");
+        y.setName("Kuku");
 
         // Определение Supplier, который будет возвращать этот экземпляр
         Supplier<Parrot> parrotSupplier = () -> x;
@@ -31,9 +30,12 @@ public class Main {
                 parrotSupplier_copy,
                 bc -> bc.setPrimary(false));
 
-        var p = context.getBean("parrot1", Parrot.class);
+        var p1 = context.getBean("parrot1", Parrot.class);
+        System.out.println(p1);
+        System.out.println(p1.getName());
 
-        System.out.println(p);
-        System.out.println(p.getName());
+        var p2 = context.getBean("parrot2", Parrot.class);
+        System.out.println(p2);
+        System.out.println(p2.getName());
     }
 }
