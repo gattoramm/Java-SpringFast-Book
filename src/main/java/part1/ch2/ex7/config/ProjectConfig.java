@@ -1,6 +1,5 @@
 package part1.ch2.ex7.config;
 
-import part1.ch2.ex7.main.Parrot;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
