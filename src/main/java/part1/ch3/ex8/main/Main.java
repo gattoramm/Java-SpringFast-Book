@@ -1,7 +1,6 @@
 package part1.ch3.ex8.main;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import part1.ch3.ex8.beans.Parrot;
 import part1.ch3.ex8.beans.Person;
 import part1.ch3.ex8.config.ProjectConfig;
 
