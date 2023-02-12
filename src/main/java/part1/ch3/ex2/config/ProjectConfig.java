@@ -18,6 +18,7 @@ public class ProjectConfig {
     public Person person() {
         var p = new Person();
         p.setName("Ella");
+        // устанавливаем связь между бинами через прямой вызов
         p.setParrot(parrot());
         return p;
     }
