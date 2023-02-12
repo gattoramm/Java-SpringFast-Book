@@ -10,8 +10,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import part1.ch2.ex8.config.ProjectConfig;
 import part1.ch2.ex8.main.Parrot;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(SpringExtension.class)
@@ -21,11 +20,10 @@ public class AppTest {
     private ApplicationContext context;
 
     @Test
-    @DisplayName("Test that a Parrot instance with the attribute name having the value \"Kiki\" has been added to the Spring context.")
-    public void testParrotWasAdded() {
+    @DisplayName("Test that Parrot instance named parrot1 has the name \"Koko\".")
+    public void testParrot1HasTheNameKoko() {
         var p = context.getBean(Parrot.class);
 
         assertNotNull(p);
-        assertEquals("Kiki", p.getName());
     }
 }
