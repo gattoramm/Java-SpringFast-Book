@@ -23,7 +23,7 @@ public class ProjectConfig {
     }
 
     @Bean
-    public Person person(@Qualifier("parrot1") Parrot parrot) {
+    public Person person(@Qualifier("parrot2") Parrot parrot) {
         var p = new Person();
         p.setName("Kate");
         p.setParrot(parrot);
