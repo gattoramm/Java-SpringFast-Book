@@ -1,4 +1,4 @@
-package part1.ch3.ex3;
+package part1.ch3.ex9;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import part1.ch3.ex3.beans.Parrot;
-import part1.ch3.ex3.beans.Person;
-import part1.ch3.ex3.config.ProjectConfig;
+import part1.ch3.ex9.beans.Parrot;
+import part1.ch3.ex9.beans.Person;
+import part1.ch3.ex9.config.ProjectConfig;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -21,24 +21,31 @@ public class AppTest {
     private ApplicationContext context;
 
     @Test
-    @DisplayName("Test that a Parrot instance has been added to the Spring context")
-    public void testKokoIsInSpringContext() {
-        var p = context.getBean(Parrot.class);
-        assertEquals("Koko", p.getName());
+    @DisplayName("Test that a Parrot instance named \"Kuku\" has been added to the Spring context")
+    public void testKukuIsInSpringContext() {
+        var p = context.getBean("parrot1", Parrot.class);
+        assertEquals("Kuku", p.getName());
+    }
+
+    @Test
+    @DisplayName("Test that a Parrot instance named \"Miki\" has been added to the Spring context")
+    public void testMikiIsInSpringContext() {
+        var p = context.getBean("parrot2", Parrot.class);
+        assertEquals("Miki", p.getName());
     }
 
     @Test
     @DisplayName("Test that a Person instance has been added to the Spring context")
     public void testEllaIsInSpringContext() {
         var p = context.getBean(Person.class);
-        assertEquals("Ella", p.getName());
+        assertEquals("Kate", p.getName());
     }
 
     @Test
-    @DisplayName("Test that the Person instance in the Spring context owns the Parrot instance named \"Koko\" from the Spring context")
-    public void testEllaOwnsKoko() {
+    @DisplayName("Test that the Person instance in the Spring context owns the Parrot instance named \"Miki\" from the Spring context")
+    public void testEllaOwnsMiki() {
         var p = context.getBean(Person.class);
         assertNotNull(p.getParrot());
-        assertEquals("Koko", p.getParrot().getName());
+        assertEquals("Miki", p.getParrot().getName());
     }
 }
