@@ -1,5 +1,8 @@
 package part1.ch2.ex8.main;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Parrot {
     private String name;
 
