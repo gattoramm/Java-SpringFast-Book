@@ -14,7 +14,7 @@ import part1.ch4.ex2.service.CommentService;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-public class AppTest {
+public class AppTests {
     @Mock
     private CommentRepository commentRepository;
 

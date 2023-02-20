@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {ProjectConfig.class})
-public class AppTest {
+public class AppTests {
     @Autowired
     private ApplicationContext context;
 

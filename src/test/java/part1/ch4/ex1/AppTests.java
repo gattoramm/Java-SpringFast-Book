@@ -10,7 +10,7 @@ import part1.ch4.ex1.proxy.CommentNotificationProxy;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-public class AppTest {
+public class AppTests {
     @Test
     @DisplayName("Verify that CommentService correctly delegates the responsibilities to the repository and proxy objects.")
     public void testCommentService() {

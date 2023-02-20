@@ -1,4 +1,4 @@
-package part1.ch3.ex9;
+package part1.ch3.ex10;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -7,16 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import part1.ch3.ex9.beans.Parrot;
-import part1.ch3.ex9.beans.Person;
-import part1.ch3.ex9.config.ProjectConfig;
+import part1.ch3.ex10.beans.Parrot;
+import part1.ch3.ex10.beans.Person;
+import part1.ch3.ex10.config.ProjectConfig;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {ProjectConfig.class})
-public class AppTest {
+public class AppTests {
     @Autowired
     private ApplicationContext context;
 
@@ -36,9 +36,9 @@ public class AppTest {
 
     @Test
     @DisplayName("Test that a Person instance has been added to the Spring context")
-    public void testEllaIsInSpringContext() {
+    public void testAliceIsInSpringContext() {
         var p = context.getBean(Person.class);
-        assertEquals("Kate", p.getName());
+        assertEquals("Alice", p.getName());
     }
 
     @Test
