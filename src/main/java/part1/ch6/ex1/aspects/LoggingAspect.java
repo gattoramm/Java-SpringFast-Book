@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class LoggingAspect {
     private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
-    @Around("execution(* services.*.*(..))")
+    @Around("execution(* part1.ch6.ex1.services.*.*(..))")
     public void log(ProceedingJoinPoint joinPoint) throws Throwable {
         logger.info("Method will execute");
         joinPoint.proceed();
