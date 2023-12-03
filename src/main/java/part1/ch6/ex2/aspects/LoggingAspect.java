@@ -25,4 +25,7 @@ public class LoggingAspect {
 
         return returnedByMethod;
     }
+    public void setLogger(Logger logger) {
+        this.logger = logger;
+    }
 }

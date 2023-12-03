@@ -13,4 +13,8 @@ public class CommentService {
         logger.info("Publishing comment:" + comment.getText());
         return "SUCCESS";
     }
+
+    public void setLogger(Logger logger) {
+        this.logger = logger;
+    }
 }
