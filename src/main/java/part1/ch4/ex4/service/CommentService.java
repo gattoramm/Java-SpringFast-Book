@@ -5,8 +5,8 @@ import part1.ch4.ex4.proxy.CommentNotificationProxy;
 import part1.ch4.ex4.repository.CommentRepository;
 
 public class CommentService {
-    private CommentRepository commentRepository;
-    private CommentNotificationProxy commentNotificationProxy;
+    private final CommentRepository commentRepository;
+    private final CommentNotificationProxy commentNotificationProxy;
 
     public CommentService(CommentRepository commentRepository,
                           CommentNotificationProxy commentNotificationProxy) {

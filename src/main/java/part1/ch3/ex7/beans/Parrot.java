@@ -1,10 +1,14 @@
 package part1.ch3.ex7.beans;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+@Getter
 @Component
 public class Parrot {
+    @Setter
     private String name = "Koko";
 
     private final Person person;
@@ -12,18 +16,6 @@ public class Parrot {
     @Autowired
     public Parrot(Person person) {
         this.person = person;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Person getPerson() {
-        return person;
     }
 
     @Override

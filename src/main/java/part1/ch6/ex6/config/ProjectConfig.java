@@ -8,7 +8,7 @@ import part1.ch6.ex6.aspects.LoggingAspect;
 import part1.ch6.ex6.aspects.SecurityAspect;
 
 @Configuration
-@ComponentScan(basePackages = "ch6.ex6.services")
+@ComponentScan(basePackages = "part1.ch6.ex6.services")
 @EnableAspectJAutoProxy
 public class ProjectConfig {
     @Bean

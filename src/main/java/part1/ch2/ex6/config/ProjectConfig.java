@@ -6,7 +6,7 @@ import part1.ch2.ex6.main.Parrot;
 
 @Configuration
 // Сообщаем Spring, где находятся классы со стереотипными аннотациями
-@ComponentScan(basePackages = "ch2.ex6")
+@ComponentScan(basePackages = "part1.ch2.ex6")
 public class ProjectConfig {
 
     Parrot parrot() {

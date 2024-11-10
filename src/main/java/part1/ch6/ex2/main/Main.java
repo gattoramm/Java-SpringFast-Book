@@ -8,7 +8,7 @@ import part1.ch6.ex2.services.CommentService;
 import java.util.logging.Logger;
 
 public class Main {
-    private static Logger logger = Logger.getLogger(Main.class.getName());
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);

@@ -1,5 +1,6 @@
 package part1.ch6.ex3.aspects;
 
+import lombok.Setter;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -8,6 +9,7 @@ import part1.ch6.ex3.model.Comment;
 import java.util.Arrays;
 import java.util.logging.Logger;
 
+@Setter
 @Aspect
 public class LoggingAspect {
     private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
@@ -31,7 +33,4 @@ public class LoggingAspect {
         return "FAILED";
     }
 
-    public void setLogger(Logger logger) {
-        this.logger = logger;
-    }
 }

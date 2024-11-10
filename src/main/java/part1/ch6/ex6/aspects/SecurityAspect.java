@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 @Aspect
 public class SecurityAspect {
-    private Logger logger = Logger.getLogger(SecurityAspect.class.getName());
+    private final Logger logger = Logger.getLogger(SecurityAspect.class.getName());
 
     @Around(value = "@annotation(ToLog)")
     public Object secure(ProceedingJoinPoint joinPoint) throws Throwable {

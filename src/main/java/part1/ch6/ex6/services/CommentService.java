@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 @Service
 public class CommentService {
-    private Logger logger = Logger.getLogger(CommentService.class.getName());
+    private final Logger logger = Logger.getLogger(CommentService.class.getName());
 
     @ToLog
     public String publishComment(Comment comment) {

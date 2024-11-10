@@ -1,15 +1,12 @@
 package part1.ch3.ex10.beans;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class Parrot {
     private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public String toString() {

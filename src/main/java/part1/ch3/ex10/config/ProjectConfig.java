@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import part1.ch3.ex10.beans.Parrot;
 
 @Configuration
-@ComponentScan(basePackages = "ch3.ex10.beans")
+@ComponentScan(basePackages = "part1.ch3.ex10.beans")
 public class ProjectConfig {
     @Bean
     public Parrot parrot1() {
